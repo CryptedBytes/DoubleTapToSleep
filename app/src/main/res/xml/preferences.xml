@@ -1,0 +1,99 @@
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="Customize Experience">
+        <!-- <Preference
+             android:selectable="false"
+             android:summary="Your preferences matter." />
+
+
+             //
+             //app:enabled="true"
+             //
+             -->
+
+        <ListPreference
+            android:title="Working mode"
+            android:entries="@array/screen_off_methods_array_readible"
+            android:entryValues="@array/screen_off_methods_array"
+            android:key="screenlockmethod"
+            android:defaultValue="root"/>
+<!--            android:summary="Current mode: %1$s"-->
+
+
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            app:title="Full transparency on statusbar"
+            app:key="darkerSB"
+            app:summaryOn="Statusbar background will be transparent. Looks better but icons may be harder to see. No noticable performance hit."
+            app:summaryOff="Statusbar background will be slightly darker than app background. No noticable performance hit."
+            />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            app:key="startWithRandomColor"
+            app:summary="If enabled, we will greet you welcome with by displaying a beautiful yet randomly selected color every time you open the app. No noticable performance hit."
+            app:title="Random color on startup"
+
+            />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="humanReadiblesEnabled"
+            android:title="Display common color names"
+            app:summary="Display names for common colors. Not all colors are supported. Color support is subject to improvement in future. Please note that, this option may have significant impact on performance." />
+
+        <!-- <EditTextPreference
+              app:key="signature"
+              app:title="@string/signature_title"
+              app:useSimpleSummaryProvider="true" />
+
+
+          <ListPreference
+              app:defaultValue="reply"
+              app:entries="@array/reply_entries"
+              app:entryValues="@array/reply_values"
+              app:key="reply"
+              app:title="@string/reply_title"
+              app:useSimpleSummaryProvider="true" />
+
+              -->
+
+
+
+
+
+    </PreferenceCategory>
+
+
+
+    <PreferenceCategory app:title="Storage Management">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="manageCacheAutomaticallyOnBoot"
+            android:title="Clear cache on app launch"
+            app:summary="Automatically clear app cache on every launch. Disabling this option may make app startup faster but will consume some storage space over time." />
+
+
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        app:title="Privacy"
+        app:key="categoryEEA">
+        <Preference
+            android:key="resetEEAConsentOnDemand"
+            android:title="Reset ad preference"
+            app:summary="If connected to internet, you will be asked if you want to see ads that are more relevant to you. Requires app restart to take effect."
+            />
+
+        <Preference
+            android:title="Remove ads"
+            app:summary="In app purchases are currently unavailable. Sorry for the inconvenience."
+            app:enabled="false"
+            />
+    </PreferenceCategory>
+
+
+</androidx.preference.PreferenceScreen>

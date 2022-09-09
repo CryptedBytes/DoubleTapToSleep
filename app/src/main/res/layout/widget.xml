@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetLayout"
+
+    style="@style/Widget.DoubleTapToSleep.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.DoubleTapToSleep.AppWidgetContainer"
+    android:background="@android:color/transparent">
+
+   <ImageView
+       android:id="@+id/imview"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/teal_200"/>
+
+    <Button
+        android:id="@+id/hiworldbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi world"/>
+
+    <Button
+        android:id="@+id/hiworldbtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hiworldbtn"
+        android:text="Hi world2" />
+
+
+</RelativeLayout>

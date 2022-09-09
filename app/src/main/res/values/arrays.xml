@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="screen_off_methods_array">
+        <item>root</item>
+        <item>accessibility</item>
+    </string-array>
+    <string-array name="screen_off_methods_array_readible">
+        <item>Root (requires rooted device)</item>
+        <item>Accessibility service (youll need to enable accessibility permission)</item>
+    </string-array>
+</resources>
